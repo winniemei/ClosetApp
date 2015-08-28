@@ -32,6 +32,7 @@ var App = {
 
 $(function(){
   App.outfits = new App.Collections.Outfits();
+  App.previewListView = new App.Views.PreviewListView({collection: App.outfits});
   App.outfitView = new App.Views.OutfitView({model: new App.Models.Outfit});
   App.outfits.fetch({reset: true});
 });
