@@ -1,30 +1,28 @@
 class OutfitsController < ApplicationController
 
 	def index
-		@outfits = Outfit.all
+		@outfits = Outfits.all
 		render json: @outfits
 	end
 
 	def create
-		@outfit = Outfit.create(outfit_params)
-		render json: @outfit
+		@outfits.create(outfit_params)
 	end
 
 	def update
-		@outfit = Outfit.update(outfit_params)
+		@outfit = Outfit.find(params[:id])
+		@outfit.update(outfit_params)
 	end
 
 	def destroy
-		@oufit = Outfit.find(params[:id])
-		@oufit.destroy();
+		@outfit = Outfit.find(params[:id])
+		@outfit.destroy
 	end
 
 	private
 
 	def outfit_params
-		params.require(:outfit).permit(:outfit_name, :image, :description, :price)
+		params.require(:outfit).permit(:outfitname)
 	end
-
-
 
 end

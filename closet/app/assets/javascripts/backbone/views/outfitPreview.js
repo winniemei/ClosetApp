@@ -1,7 +1,7 @@
 App.Views.OutfitPreview = Backbone.View.extend({
 	initialize: function(){
 		console.log("Outfit preview created");
-		this.template = HandlebarsTemplates['outfitlist'];
+		this.template = HandlebarsTemplates['preview'];
 		this.render();
 		this.listenTo(this.model, 'change', this.render);
 		this.listenTo(this.model, 'remove', this.remove)
