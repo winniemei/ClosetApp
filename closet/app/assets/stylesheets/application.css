@@ -23,22 +23,22 @@ body {
 }
 h1 {
   font-family: lato;
-  font-size: black;
+  font-size: darkgrey;
   font-weight: 300;
-  color: black;
+  color: darkgrey;
   cursor: pointer;
   text-align: center;
 }
 
 input, textarea, #outfit-view {
-  color: black;
+  color: darkgrey;
   text-align: center;
   background: transparent;
   font-family: Lato;
   font-weight: 300;
   font-size: 20px;
-  border: black;
-  outline: black;
+  border: darkgrey;
+  outline: darkgrey;
   letter-spacing: 1px;
 }
 input, textarea {
@@ -95,5 +95,9 @@ input:hover {
   width: 20%;
   height: 60%;
   float: right;
+}
+.delete {
+  font-family: Lato
+  color: darkgrey;
 }
 
